@@ -1,155 +1,153 @@
 <!Doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>evabronskayaa</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather%3A400%2C700%2C900%2C400italic%2C700italic%2C900italic%7CMontserrat%3A400%2C700%7CInconsolata%3A400%7COpen+Sans%3A300%2C400%2C600%2C600i%2C700%2C800&subset=latin%2Clatin-ext"/>
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="icon" type="image" href="img/icon.png">
+    <meta charset="UTF-8">
+    <title>evabronskayaa</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather%3A400%2C700%2C900%2C400italic%2C700italic%2C900italic%7CMontserrat%3A400%2C700%7CInconsolata%3A400%7COpen+Sans%3A300%2C400%2C600%2C600i%2C700%2C800&subset=latin%2Clatin-ext"
+    />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" type="image" href="img/icon.png">
 </head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
 <body>
-<header>
-    <div>
-        <ul class="main-menu ">
-            <li class="main-menu-item"><a class="main-menu-link" href="#about">About</a></li>
-            <li class="main-menu-item"><a class="main-menu-link" href="#lang">Langs</a></li>
-            <li class="main-menu-item"><a class="main-menu-link" href="#info">Info</a></li>
-            <li class="main-menu-item">
-                <div class="button-more"><a class="main-menu-link" href="">More</a></div>
-                <div class="message">
-                    <div>
-                      <div class="text-message">
-                        <h5>А еще я без опыта работы😂</h5>
-                      </div>
+    <header>
+        <div>
+            <ul class="main-menu ">
+                <li class="main-menu-item"><a class="main-menu-link" href="#about">About</a></li>
+                <li class="main-menu-item"><a class="main-menu-link" href="#lang">Langs</a></li>
+                <li class="main-menu-item"><a class="main-menu-link" href="#info">Info</a></li>
+                <li class="main-menu-item">
+                    <div class="button-more"><a class="main-menu-link" href="">More</a></div>
+                    <div class="message">
+                        <div>
+                            <div class="text-message">
+                                <h5>А еще я без опыта работы😂</h5>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <script>
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 1) {
+                $('header').addClass("sticky");
+            } else {
+                $('header').removeClass("sticky");
+            }
+        });
+        $(document).ready(function() {
+            $('.button-more').click(function() {
+                $('.message').fadeToggle('fast', 'linear');
+                return false
+            });
+        });
+    </script>
+    <section class="content">
+        <div id="about">
+            <div class="left-position">
+                <h2 class="title" style="width: 15%">About</h2>
+                <div class="text-about">
+                    Привет, я <b>Бронская Ева</b> :) Учусь в ЧелГУ на направлении "Программная инженерия". Мне очень нравится сфера Machine Learning, и стараюсь как можно чаще делать хоть маленькие шажочки на пути к прокачке себя в этом направлении. А
+                    еще мне нравится Web Development, но я пока мало что в нем знаю, поэтому надеюсь именно на курсах от Xpage смогу научиться чему-то новому!
+                </div>
+            </div>
+            <img class="right-position" src="img/aboutme1.jpg" alt="">
+        </div>
+        <div id="lang">
+            <div class="right-position">
+                <div class="title">Languages</div>
+                <table border="1">
+                    <tr>
+                        <th></th>
+                        <th>Python</th>
+                        <th>C#</th>
+                        <th>C++</th>
+                        <th>Java</th>
+                        <th>JavaScript</th>
+                    </tr>
+                    <tr>
+                        <th>Excellent</th>
+                        <td></td>
+                        <td>+</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>Good</th>
+                        <td>+</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>Average</th>
+                        <td></td>
+                        <td></td>
+                        <td>+</td>
+                        <td>+</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th>Bad</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>+</td>
+                    </tr>
+                </table>
+            </div>
+            <img class="left-position" src="img/langs1.jpg" alt="">
+        </div>
+    </section>
+    <footer id="info">
+        <div id="sitemap">
+            <div style="display: flex;flex-direction: column;">
+                <div class="footer-title"> Site-Map</div>
+                <a class="footer-link" href="#about">About</a>
+                <a class="footer-link" href="#lang">Langs</a>
+                <a class="footer-link" href="#info">Info</a>
+            </div>
+        </div>
+        <div id="footer-info">
+            <div style="margin-left: 33px;display: flex;flex-direction: column;">
+                <div id="city-tel">
+                    <div id="city">
+                        <div class="footer-title">City</div>
+                        <div class="footer-link" style="font-size: 10px">Chelyabinsk</div>
+                    </div>
+                    <div id="tel">
+                        <div style="width:30px;">
+                            <div class="footer-title">tel</div>
+                            <div class="footer-link" style="font-size: 10px">+79227589771</div>
+                        </div>
                     </div>
                 </div>
-            </li>
-        </ul>
-    </div>
-</header>
-<script>
-    $(window).scroll(function() {
-     if ($(this).scrollTop() > 1){
-       $('header').addClass("sticky");
-     }
-     else{
-       $('header').removeClass("sticky");
-     }
-    });
-    $(document).ready(function () {
-      $('.button-more').click(function () {
-        $('.message').fadeToggle('fast', 'linear');
-        return false
-      });
-    });
-</script>
-<section class="content">
-    <div id="about">
-      <div class="left-position">
-        <h2 class="title" style="width: 15%">About</h2>
-        <div class="text-about">
-          Привет, я <b>Бронская Ева</b> :)
-          Учусь в ЧелГУ на направлении "Программная инженерия". Мне очень нравится сфера Machine
-          Learning, и стараюсь как можно чаще делать хоть маленькие
-          шажочки на пути к прокачке себя в этом направлении. А еще
-          мне нравится Web Development, но я пока мало что в нем знаю,
-          поэтому надеюсь именно на курсах от Xpage смогу научиться
-          чему-то новому!
+                <div id="social" style="width:350px;float:left;margin: 0 15px 15px 0;">
+                    <div>
+                        <div class="footer-title">Telegram, Instagram, Vk</div>
+                        <div class="footer-link" style="font-size: 10px">@evabronskayaa</div>
+                    </div>
+                </div>
+            </div>
+            <div id="interested">
+                <div>
+                    <div class="footer-title">If interested in</div>
+                    <form style="display: flex;flex-direction: column;">
+                        <input placeholder="Name" type="text">
+                        <input placeholder="Tel" type="number">
+                        <a href="" class="floating-button">Send</a>
+                    </form>
+                </div>
+            </div>
         </div>
-      </div>
-      <img class="right-position" src="img/aboutme1.jpg"  alt="">
-    </div>
-    <div id="lang">
-      <div class="right-position">
-        <div class="title">Languages</div>
-          <table border="1">
-            <tr>
-              <th></th>
-              <th>Python</th>
-              <th>C#</th>
-              <th>C++</th>
-              <th>Java</th>
-              <th>JavaScript</th>
-            </tr>
-            <tr>
-              <th>Excellent</th>
-              <td></td>
-              <td>+</td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th>Good</th>
-              <td>+</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th>Average</th>
-              <td></td>
-              <td></td>
-              <td>+</td>
-              <td>+</td>
-              <td></td>
-            </tr>
-            <tr>
-              <th>Bad</th>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>+</td>
-            </tr>
-          </table>
-      </div>
-      <img class="left-position" src="img/langs1.jpg" alt="">
-    </div>
-</section>
-<footer id="info">
-  <div id="sitemap">
-    <div style="display: flex;flex-direction: column;">
-      <div class="footer-title" > Site-Map</div>
-      <a class="footer-link" href="#about">About</a>
-      <a class="footer-link" href="#lang">Langs</a>
-      <a class="footer-link" href="#info">Info</a>
-    </div>
-  </div>
-  <div id="footer-info">
-    <div style="margin-left: 33px;display: flex;flex-direction: column;">
-    <div id="city-tel">
-      <div id="city">
-        <div class="footer-title">City</div>
-        <div class="footer-link" style="font-size: 10px">Chelyabinsk</div>
-      </div>
-      <div id="tel">
-      <div  style="width:30px;">
-        <div class="footer-title">tel</div>
-        <div class="footer-link" style="font-size: 10px">+79227589771</div>
-      </div>
-    </div>
-    </div>
-      <div id="social" style="width:350px;float:left;margin: 0 15px 15px 0;">
-        <div>
-          <div class="footer-title" >Telegram, Instagram, Vk</div>
-          <div class="footer-link" style="font-size: 10px">@evabronskayaa</div>
-        </div>
-      </div>
-  </div>
-  <div id="interested">
-    <div >
-      <div class="footer-title">If interested in</div>
-      <form style="display: flex;flex-direction: column;">
-        <input placeholder="Name" type="text">
-        <input placeholder="Tel" type="number">
-        <a href="" class="floating-button">Send</a>
-      </form>
-    </div>
-  </div>
-  </div>
-</footer>
+    </footer>
 </body>
+
 </html>
